@@ -39,6 +39,16 @@ export default class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <!-- Google tag (gtag.js) -->
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T9BHVMG9L"></script>
+          <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-0T9BHVMG9L');
+          </script>
+
           <meta
               name="description"
               content="I'm Lucas, I'm Front-end Engineering"
@@ -69,7 +79,7 @@ export default class MyDocument extends Document {
               name="twitter:image"
               content="vigads"
             />
-        </Head>
+        </Head>      
         
         <body>
           <Main />
