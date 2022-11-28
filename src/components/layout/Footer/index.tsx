@@ -12,11 +12,11 @@ export default function Footer() {
             <Image alt="Github profile" src="/images/github.svg" width={22} height={22} />
           </a>
 
-          <a href="https://github.com/lucasviga" target="_blank" rel="noreferrer">
+          <a href="https://linkedin.com/in/lucasviga" target="_blank" rel="noreferrer">
             <Image alt="Github profile" src="/images/linkedin.svg" width={22} height={22} />
           </a>
 
-          <a href="https://github.com/lucasviga" target="_blank" rel="noreferrer">
+          <a href="mailto:lucasviga12@gmail.com" target="_blank" rel="noreferrer">
             <Image alt="Github profile" src="/images/mail.svg" width={22} height={22} />
           </a>
         </div>
