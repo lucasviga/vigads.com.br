@@ -40,22 +40,29 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           <!-- Google tag (gtag.js) -->
-          <script async src="https://www.googletagmanager.com/gtag/js?id=G-0T9BHVMG9L"></script>
-          <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+          <Sript strategy="beforeInteractive" async src="https://www.googletagmanager.com/gtag/js?id=G-0T9BHVMG9L" />
+          
+          <Script 
+            strategy="beforeInteractive"
+            id=""
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
 
-            gtag('config', 'G-0T9BHVMG9L');
-          </script>
+                gtag('config', 'G-0T9BHVMG9L');
+              `
+            }}
+          />
 
-          <meta
+            <meta
               name="description"
               content="I'm Lucas, I'm Front-end Engineering"
             />
             <meta property="og:url" content="https://vigads.com.br/" />
             <meta property="og:type" content="website" />
-            <meta property="og:title" content="vigads" />
+            <meta property="og:title" content="Lucas Viga - Front-end Engineering Design" />
             <meta
               property="og:description"
               content="I’ve been working as a developer for more than 2 years. During this time, I’ve been developing with theses techs: React JS/Native, Next JS, JS and TS, Chakra UI, Styled Components and more."
@@ -70,7 +77,7 @@ export default class MyDocument extends Document {
               content="https://vigads.com.br/"
             />
             <meta property="twitter:url" content="https://vigads.com.br/" />
-            <meta name="twitter:title" content="vigads" />
+            <meta name="twitter:title" content="Lucas Viga - Front-end Engineering Design" />
             <meta
               name="twitter:description"
               content="I’ve been working as a developer for more than 2 years. During this time, I’ve been developing with theses techs: React JS/Native, Next JS, JS and TS, Chakra UI, Styled Components and more."
