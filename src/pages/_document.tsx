@@ -38,13 +38,12 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html>
-        <Head>
-          <!-- Google tag (gtag.js) -->
-          <Sript strategy="beforeInteractive" async src="https://www.googletagmanager.com/gtag/js?id=G-0T9BHVMG9L" />
+        <Head>          
+          <Script strategy="beforeInteractive" async src="https://www.googletagmanager.com/gtag/js?id=G-0T9BHVMG9L" />
           
           <Script 
             strategy="beforeInteractive"
-            id=""
+            id="google-analytics"
             dangerouslySetInnerHTML={{
               __html: `
                 window.dataLayer = window.dataLayer || [];

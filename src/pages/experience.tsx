@@ -1,12 +1,17 @@
 import Image from "next/image";
 import { Container, ListExperiences, Wrapper } from "../../styles/pages/experience";
+import GoBackToPreviousPage from "../components/GoBackButton";
 
 export default function Experience() {
   return (
     <Container>
       <Wrapper>
-                
-        <h1>Experience</h1>        
+        <GoBackToPreviousPage />
+        <h1>Work Experience</h1>    
+
+        <p className="download-resume">
+          <a href="/downloads/lucas-viga-frontend-developer.pdf" download>Download</a> my resume in PDF here.
+        </p>    
 
         <ListExperiences>
           <div className="experience-item">

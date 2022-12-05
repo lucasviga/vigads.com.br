@@ -1,11 +1,13 @@
 import { Container, ListEducations, Wrapper } from "../../styles/pages/education";
+import GoBackToPreviousPage from "../components/GoBackButton";
 import { educations } from "../data/education";
 
 export default function Education() {
   return (
     <Container>
       <Wrapper>
-        <h1>Education</h1>
+        <GoBackToPreviousPage />
+        <h1>Education</h1>        
 
         <ListEducations>
           {educations.map(item => (
