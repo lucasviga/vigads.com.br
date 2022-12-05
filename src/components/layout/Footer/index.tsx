@@ -19,6 +19,10 @@ export default function Footer() {
           <a href="mailto:lucasviga12@gmail.com" target="_blank" rel="noreferrer">
             <Image alt="Github profile" src="/images/mail.svg" width={22} height={22} />
           </a>
+
+          <a href="https://instagram.com/vigads.dev" target="_blank" rel="noreferrer">
+            <Image alt="Github profile" src="/images/instagram.svg" width={18} height={18} />
+          </a>
         </div>
 
         <p>vigads © 2022</p>

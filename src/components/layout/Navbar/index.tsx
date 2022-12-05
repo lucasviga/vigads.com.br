@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import ActiveLink from './ActiveLink'
 import { Header } from './styles'
 
 export default function Navbar() {
@@ -11,11 +12,11 @@ export default function Navbar() {
 
         <ul>
           <li>
-            <Link href="/education">education</Link>
+            <ActiveLink href="/education" activeClassName='nav-active'>education</ActiveLink>
           </li>
 
           <li>
-            <Link href="/experience">experience</Link>
+            <ActiveLink href="/experience" activeClassName='nav-active'>experience</ActiveLink>
           </li>        
         </ul>
       </nav>

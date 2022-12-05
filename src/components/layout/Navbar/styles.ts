@@ -16,6 +16,10 @@ export const Header = styled.header`
 
     color: var(--green-500);
 
+    .nav-active {
+      color: var(--purple-300)
+    }
+
     > span {
       font-size: 1.25rem;
     }
@@ -26,7 +30,7 @@ export const Header = styled.header`
       
       li a {
         transition: all .5s ease;    
-      }
+      }      
 
       a:hover {
         color: var(--purple-300);        
