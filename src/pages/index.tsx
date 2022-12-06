@@ -1,13 +1,37 @@
 import Image from "next/image";
 import Link from "next/link";
-import { Aboutme, SummaryExperience } from "../../styles/pages/home";
+import { motion } from "framer-motion"
 
+import { Aboutme, SummaryExperience } from "../../styles/pages/home";
 import {experiences} from '../data/techs';
 
-export default function Home() {
+export default function Home() {  
+  const container = {
+    hidden: { opacity: 1, scale: 0 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        delayChildren: 0.6,
+        staggerChildren: 0.2
+      }
+    }
+  };
+  
+  const item = {
+    hidden: { y: 20, opacity: 0 },
+    visible: {
+      y: 0,
+      opacity: 1
+    }
+  };
+
   return (
     <>
-      <Aboutme>
+      <Aboutme 
+        animate={{ x: 50 }}
+        transition={{ type: "spring", stiffness: 100 }}
+      >
         <div className="about-me">
           <h1>Hi, I{"'"}m Lucas;</h1>
           <span>Front-end Engineering</span>          
@@ -43,16 +67,20 @@ export default function Home() {
         </div>
 
         <div className="techs">
-          {experiences.map(item => (
-            <div key={item.id}>
-              <p>{item.role}</p>
-              <ul>
-                {item.techs.map(tech => (
-                  <li key={tech.id}>
+          {experiences.map((experience) => (
+            <div key={experience.id}>
+              <p>{experience.role}</p>
+              <motion.ul
+                variants={container}
+                initial="hidden"
+                animate="visible"
+              >
+                {experience.techs.map((tech) => (
+                  <motion.li key={tech.id} variants={item}>
                     <Image alt="React" src={tech.url} height={25} width={25} />
-                  </li>
+                  </motion.li>
                 ))}                
-              </ul>
+              </motion.ul>
             </div>
           ))}
         </div>

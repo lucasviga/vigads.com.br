@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { motion } from "framer-motion"
 
-export const Aboutme = styled.section`
+export const Aboutme = styled(motion.section)`
   display: grid;
   max-width: 1120px;
   margin: 4.875rem auto;
