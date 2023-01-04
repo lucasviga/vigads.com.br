@@ -8,20 +8,20 @@ export default function Footer() {
         <div>
           <span>Follow me</span>
           
-          <a href="https://github.com/lucasviga" target="_blank" rel="noreferrer">
+          <a data-testid="github" href="https://github.com/lucasviga" target="_blank" rel="noreferrer">
             <Image alt="Github profile" src="/images/github.svg" width={22} height={22} />
           </a>
 
-          <a href="https://linkedin.com/in/lucasviga" target="_blank" rel="noreferrer">
-            <Image alt="Github profile" src="/images/linkedin.svg" width={22} height={22} />
+          <a data-testid="linkedin" href="https://linkedin.com/in/lucasviga" target="_blank" rel="noreferrer">
+            <Image alt="Linkeding profile" src="/images/linkedin.svg" width={22} height={22} />
           </a>
 
-          <a href="mailto:lucasviga12@gmail.com" target="_blank" rel="noreferrer">
-            <Image alt="Github profile" src="/images/mail.svg" width={22} height={22} />
+          <a data-testid="email" href="mailto:lucasviga12@gmail.com" target="_blank" rel="noreferrer">
+            <Image alt="Email" src="/images/mail.svg" width={22} height={22} />
           </a>
 
-          <a href="https://instagram.com/vigads.dev" target="_blank" rel="noreferrer">
-            <Image alt="Github profile" src="/images/instagram.svg" width={18} height={18} />
+          <a data-testid="instagram" href="https://instagram.com/vigads.dev" target="_blank" rel="noreferrer">
+            <Image alt="Instagram profile" src="/images/instagram.svg" width={18} height={18} />
           </a>
         </div>
 
