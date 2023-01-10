@@ -7,7 +7,9 @@ export default function Navbar() {
     <Header>
       <nav>
         <span>
-          <Link href="/"><b>Lucas</b> Viga</Link>
+          <Link href="/">
+            Lucas Viga
+          </Link>
         </span>
 
         <ul>
@@ -17,7 +19,7 @@ export default function Navbar() {
 
           <li>
             <ActiveLink href="/experience" activeClassName='nav-active'>experience</ActiveLink>
-          </li>        
+          </li>         
         </ul>
       </nav>
     </Header>

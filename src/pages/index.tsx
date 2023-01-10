@@ -26,7 +26,7 @@ export default function Home() {
         </div>
 
         <div className="avatar">
-          <Image alt="Picture of the author" src="/images/me.png" width={212} height={298} />
+          <Image alt="Lucas's avatar profile" src="/images/me.png" width={212} height={298} />
         </div>
       </Aboutme>
 

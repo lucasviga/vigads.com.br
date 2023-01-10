@@ -13,7 +13,7 @@ export default function Footer() {
           </a>
 
           <a data-testid="linkedin" href="https://linkedin.com/in/lucasviga" target="_blank" rel="noreferrer">
-            <Image alt="Linkeding profile" src="/images/linkedin.svg" width={22} height={22} />
+            <Image alt="Linkedin profile" src="/images/linkedin.svg" width={22} height={22} />
           </a>
 
           <a data-testid="email" href="mailto:lucasviga12@gmail.com" target="_blank" rel="noreferrer">

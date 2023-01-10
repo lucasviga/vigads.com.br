@@ -7,16 +7,16 @@ interface ShowMenuProps {
   onCloseMenu: () => void;
 }
 
-interface ToggleProps {
+interface ToggleProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   src: string;
   alt: string;
-  onToogleMenu: () => void;
+  onToggleMenu: () => void;  
 }
 
-function Toggle({alt, onToogleMenu, src}: ToggleProps) {
+export function Toggle({alt, onToggleMenu, src, ...rest}: ToggleProps) {
   return (
-    <button onClick={onToogleMenu}>
-      <Image 
+    <button data-testid="open-menu" type="button" onClick={onToggleMenu} {...rest}>
+      <Image        
         src={src} 
         alt={alt}
         width={18}
@@ -29,13 +29,13 @@ function Toggle({alt, onToogleMenu, src}: ToggleProps) {
 function ShowMenu({ onCloseMenu }: ShowMenuProps ) {
   return (
     <ListMenu>
-      <li>
+      <li data-testid="navlink">
         <Link href="/" onClick={onCloseMenu}>Home</Link>
 
         <Link href="/" onClick={onCloseMenu}>
           <Image 
               src="/images/arrow-right.svg" 
-              alt="Icon with 3 lines to represent a Menu list" 
+              alt="Icon arrow right" 
               width={18}
               height={18}
             />
@@ -48,7 +48,7 @@ function ShowMenu({ onCloseMenu }: ShowMenuProps ) {
         <Link href="/education" onClick={onCloseMenu}>
           <Image 
               src="/images/arrow-right.svg" 
-              alt="Icon with 3 lines to represent a Menu list" 
+              alt="Icon arrow right" 
               width={18}
               height={18}
             />
@@ -61,7 +61,7 @@ function ShowMenu({ onCloseMenu }: ShowMenuProps ) {
         <Link href="/experience" onClick={onCloseMenu}>
           <Image 
               src="/images/arrow-right.svg" 
-              alt="Icon with 3 lines to represent a Menu list" 
+              alt="Icon arrow right" 
               width={18}
               height={18}
             />
@@ -80,20 +80,22 @@ export default function NavbarMobile() {
     <Nav>
       <div className="navbar-mobile-wrapper">
         <div>
-          <Link href="/"><b>Lucas</b> Viga</Link>      
+          <Link href="/">Lucas Viga</Link>      
 
-          {isMenuOpen ? (
+          {isMenuOpen ? (                       
             <Toggle 
-                src="/images/close.svg" 
+              data-testid="open-menu"               
+              onToggleMenu={handleOpenMenu}          
+              src="/images/close.svg" 
                 alt="Icon with X letter to close menu" 
-                onToogleMenu={handleOpenMenu}
-              />
-          ) : (
-            <Toggle
+            /> 
+          ) : (    
+            <Toggle 
+              data-testid="open-menu"               
+              onToggleMenu={handleOpenMenu}          
               src="/images/menu.svg" 
               alt="Icon with 3 lines to represent a Menu list" 
-              onToogleMenu={handleOpenMenu}
-            />
+            />  
           )}
         </div>
       </div>
