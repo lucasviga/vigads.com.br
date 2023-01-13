@@ -2,6 +2,10 @@ import Image from 'next/image'
 import { Container } from './styles'
 
 export default function Footer() {
+
+  const today = new Date();
+  
+
   return (
     <Container>
       <div className='footer-content'>
@@ -25,7 +29,7 @@ export default function Footer() {
           </a>
         </div>
 
-        <p>vigads © 2022</p>
+        <p>vigads © {today.getFullYear()}</p>
       </div>
     </Container>
   )
