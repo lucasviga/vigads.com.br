@@ -22,6 +22,14 @@ export const experiences = [
       {
         id: 5,
         url: '/images/techs/figma.svg'
+      },
+      {
+        id: 6,
+        url: '/images/techs/jest.svg'
+      },
+      {
+        id: 7,
+        url: '/images/techs/testing-library.svg'
       }
     ]
   },
