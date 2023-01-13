@@ -45,17 +45,16 @@ describe('Navbar', () => {
   it('should be able to open and close menu', async () => {    
     resizeWindow(390, 844);
     
-    const {getByTestId, findByTestId, queryByTestId} = render(<NavbarMobile />);    
+    const {findByTestId, queryByTestId} = render(<NavbarMobile />);    
     
     const openMenuBtn = await findByTestId('open-menu');
 
     fireEvent.click(openMenuBtn)        
 
-    await waitFor(() => expect(getByTestId('navlink')).toBeInTheDocument())
+    expect(await findByTestId('navlink')).toBeInTheDocument()
     
-    fireEvent.click(openMenuBtn)
-    const navlink = queryByTestId('navlink')
+    fireEvent.click(openMenuBtn)    
 
-     waitFor(() => expect(navlink).toBeNull());
+    expect(queryByTestId('navlink')).toBeNull();
   })
 })
