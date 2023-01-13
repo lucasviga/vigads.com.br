@@ -10,7 +10,7 @@ export default function Home() {
       <Aboutme>
         <div className="about-me">
           <h1>Hi, I{"'"}m Lucas;</h1>
-          <span>Front-end Engineering</span>          
+          <span>Front-end Engineer</span>          
         </div>
 
         <div className="bio">

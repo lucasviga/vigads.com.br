@@ -80,7 +80,7 @@ export default function NavbarMobile() {
     <Nav>
       <div className="navbar-mobile-wrapper">
         <div>
-          <Link href="/">Lucas Viga</Link>      
+          <Link href="/" onClick={handleOpenMenu}>Lucas Viga</Link>      
 
           {isMenuOpen ? (                       
             <Toggle 

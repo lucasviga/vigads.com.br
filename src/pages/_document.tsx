@@ -57,11 +57,11 @@ export default class MyDocument extends Document {
 
             <meta
               name="description"
-              content="I'm Lucas, I'm Front-end Engineering"
+              content="I'm Lucas, I'm Front-end Engineer"
             />
             <meta property="og:url" content="https://vigads.com.br/" />
             <meta property="og:type" content="website" />
-            <meta property="og:title" content="Lucas Viga - Front-end Engineering Design" />
+            <meta property="og:title" content="Lucas Viga - Front-end Engineer Design" />
             <meta
               property="og:description"
               content="I’ve been working as a developer for more than 2 years. During this time, I’ve been developing with theses techs: React JS/Native, Next JS, JS and TS, Chakra UI, Styled Components and more."
@@ -76,7 +76,7 @@ export default class MyDocument extends Document {
               content="https://vigads.com.br/"
             />
             <meta property="twitter:url" content="https://vigads.com.br/" />
-            <meta name="twitter:title" content="Lucas Viga - Front-end Engineering Design" />
+            <meta name="twitter:title" content="Lucas Viga - Front-end Engineer Design" />
             <meta
               name="twitter:description"
               content="I’ve been working as a developer for more than 2 years. During this time, I’ve been developing with theses techs: React JS/Native, Next JS, JS and TS, Chakra UI, Styled Components and more."

@@ -1,7 +1,7 @@
 export const experiences = [
   {
     id: 1,
-    role: 'Front-end Engineering Design',
+    role: 'Front-end Engineer Design',
     techs: [
       {
         id: 1,
