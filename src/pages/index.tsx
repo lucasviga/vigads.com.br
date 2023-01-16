@@ -57,7 +57,7 @@ export default function Home() {
               <p>{item.role}</p>
               <ul>
                 {item.techs.map((tech) => (
-                  <li key={tech.name}>
+                  <li key={tech.id}>
                     <Image alt='React' src={tech.url} height={25} width={25} />
                   </li>
                 ))}
