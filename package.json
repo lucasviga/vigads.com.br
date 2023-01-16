@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --ignore-pats .gitignore",
+    "lint": "next lint --ignore-path .gitignore",
     "prettier": "prettier --ignore-path .gitignore --write \"**/*.(ts|tsx|json)\"",
     "format": "yarn prettier -- --write",
     "check-format": "yarn prettier -- --list-different",
