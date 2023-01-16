@@ -18,7 +18,7 @@ export default function Navbar() {
           </li>
 
           <li>
-            <ActiveLink href='/experience' activeClassName={2}>
+            <ActiveLink href='/experience' activeClassName='nav-active'>
               experience
             </ActiveLink>
           </li>
