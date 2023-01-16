@@ -7,15 +7,15 @@ export const Container = styled.footer`
   align-items: center;
   justify-content: center;
   width: 100%;
-  padding: 1rem 0;  
+  padding: 1rem 0;
 
   .footer-content {
     max-width: 1120px;
     display: flex;
     width: 100%;
 
-    @media(max-width: 900px) {
-      padding: 1rem 1.625rem;    
+    @media (max-width: 900px) {
+      padding: 1rem 1.625rem;
     }
 
     justify-content: space-between;

@@ -1,3 +1,36 @@
 {
-  "extends": "next/core-web-vitals"
+  "parserOptions": {
+    "ecmaVersion": 2019,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "tsx": true
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "next/core-web-vitals",
+    "eslint-config-prettier"
+  ],
+  "rules": {
+    "strict": ["error", "never"],
+    "@typescript-eslint/no-unused-vars": "error"
+  },
+  "env": {
+    "browser": true
+  },
+  "overrides": [
+    {
+      "files": "**/*.+(ts|tsx)",
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
+      "plugins": ["@typescript-eslint/eslint-plugin"],
+      "extends": [
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended"
+        //"eslint-config-prettier/@typescript-eslint"
+      ]
+    }
+  ]
 }

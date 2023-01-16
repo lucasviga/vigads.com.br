@@ -5,21 +5,19 @@ export const Aboutme = styled.section`
   max-width: 1120px;
   margin: 4.875rem auto;
 
-  grid-template-areas: 
-    ". avatar"
-    "aboutme avatar"
-    "bio avatar"
-    ". avatar"
-  ;  
+  grid-template-areas:
+    '. avatar'
+    'aboutme avatar'
+    'bio avatar'
+    '. avatar';
   justify-content: space-between;
 
-  @media(max-width: 900px) {
-    grid-template-areas: 
-      "avatar ."
-      "avatar aboutme"
-      "avatar ."
-      "bio bio"
-    ;
+  @media (max-width: 900px) {
+    grid-template-areas:
+      'avatar .'
+      'avatar aboutme'
+      'avatar .'
+      'bio bio';
 
     margin: 4.875rem 1.625rem;
     grid-template-columns: 1fr 1fr;
@@ -33,7 +31,7 @@ export const Aboutme = styled.section`
       font-size: 2.625rem;
       font-weight: 400;
 
-      @media(max-width: 900px) {
+      @media (max-width: 900px) {
         font-size: 1.125rem;
       }
     }
@@ -56,13 +54,13 @@ export const Aboutme = styled.section`
       font-weight: 300;
       line-height: 1.8rem;
 
-      @media(max-width: 900px) {
-        font-size: 1rem;     
+      @media (max-width: 900px) {
+        font-size: 1rem;
         max-width: none;
       }
 
-      @media(max-width: 600px) {
-        line-height: 1.5rem;      
+      @media (max-width: 600px) {
+        line-height: 1.5rem;
       }
     }
   }
@@ -70,15 +68,15 @@ export const Aboutme = styled.section`
   .avatar {
     grid-area: avatar;
 
-    position: relative;    
+    position: relative;
     z-index: 1;
     margin-right: 2rem;
 
-    @media(max-width: 900px) {
+    @media (max-width: 900px) {
       margin-right: 0;
     }
 
-    @media(max-width: 900px) {
+    @media (max-width: 900px) {
       img {
         width: 7.438rem;
         height: 10.5rem;
@@ -87,10 +85,10 @@ export const Aboutme = styled.section`
   }
 
   .avatar::after {
-    content: "";
+    content: '';
     width: 212px;
     height: 298px;
-    background: linear-gradient(180deg, var(--purple-500) 0%, #120F1A 97.32%);
+    background: linear-gradient(180deg, var(--purple-500) 0%, #120f1a 97.32%);
 
     position: absolute;
     top: 2rem;
@@ -98,7 +96,7 @@ export const Aboutme = styled.section`
     z-index: -1;
     border-radius: 0.375rem;
 
-    @media(max-width: 900px) {
+    @media (max-width: 900px) {
       width: 7.438rem;
       height: 10.5rem;
       top: 1rem;
@@ -108,7 +106,7 @@ export const Aboutme = styled.section`
 `;
 
 export const SummaryExperience = styled.section`
-  background: var(--purple-800);    
+  background: var(--purple-800);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -116,13 +114,13 @@ export const SummaryExperience = styled.section`
   width: 100%;
   padding: 5rem 0;
 
-  @media(max-width: 900px) {
+  @media (max-width: 900px) {
     padding: 3rem 1.625rem;
   }
 
   .content {
-    max-width: 1120px;   
-    display: flex;    
+    max-width: 1120px;
+    display: flex;
     width: 100%;
 
     header {
@@ -134,14 +132,14 @@ export const SummaryExperience = styled.section`
         justify-content: space-between;
         margin-bottom: 0.25rem;
 
-        @media(max-width: 900px) {
+        @media (max-width: 900px) {
           margin-bottom: 0.45rem;
         }
 
         h1 {
           font-size: 1rem;
           color: var(--green-500);
-          font-weight: 400;          
+          font-weight: 400;
         }
       }
 
@@ -150,7 +148,7 @@ export const SummaryExperience = styled.section`
         color: var(--purple-300);
         font-weight: 400;
 
-        @media(max-width: 900px) {
+        @media (max-width: 900px) {
           font-size: 0.9rem;
         }
       }
@@ -162,7 +160,7 @@ export const SummaryExperience = styled.section`
   }
 
   .techs {
-    max-width: 1120px;   
+    max-width: 1120px;
     width: 100%;
     display: flex;
     align-items: flex-start;
@@ -170,18 +168,18 @@ export const SummaryExperience = styled.section`
     flex-wrap: wrap;
     gap: 3rem 4.75rem;
 
-    @media(max-width: 900px) {
+    @media (max-width: 900px) {
       gap: 3rem;
     }
 
-    @media(max-width: 320px) {
+    @media (max-width: 320px) {
       gap: 2rem;
     }
 
     div {
       p {
         color: var(--white);
-        margin-bottom: 0.6rem;        
+        margin-bottom: 0.6rem;
       }
 
       ul {
@@ -196,11 +194,11 @@ export const SummaryExperience = styled.section`
         border-radius: 50%;
         display: flex;
         align-items: center;
-        justify-content: center;        
+        justify-content: center;
 
-        @media(max-width: 900px) {
+        @media (max-width: 900px) {
           width: 2rem;
-          height: 2rem;          
+          height: 2rem;
 
           img {
             width: 18px;

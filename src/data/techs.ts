@@ -5,33 +5,33 @@ export const experiences = [
     techs: [
       {
         id: 1,
-        url: '/images/techs/react.svg'
+        url: '/images/techs/react.svg',
       },
       {
         id: 2,
-        url: '/images/techs/rn.svg'
+        url: '/images/techs/rn.svg',
       },
       {
         id: 3,
-        url: '/images/techs/nextjs.svg'
+        url: '/images/techs/nextjs.svg',
       },
       {
         id: 4,
-        url: '/images/techs/vite.svg'
+        url: '/images/techs/vite.svg',
       },
       {
         id: 5,
-        url: '/images/techs/figma.svg'
+        url: '/images/techs/figma.svg',
       },
       {
         id: 6,
-        url: '/images/techs/jest.svg'
+        url: '/images/techs/jest.svg',
       },
       {
         id: 7,
-        url: '/images/techs/testing-library.svg'
-      }
-    ]
+        url: '/images/techs/testing-library.svg',
+      },
+    ],
   },
   {
     id: 2,
@@ -39,13 +39,13 @@ export const experiences = [
     techs: [
       {
         id: 1,
-        url: '/images/techs/appstore.svg'
+        url: '/images/techs/appstore.svg',
       },
       {
         id: 2,
-        url: '/images/techs/googleplay.svg'
+        url: '/images/techs/googleplay.svg',
       },
-    ]
+    ],
   },
   {
     id: 3,
@@ -53,13 +53,13 @@ export const experiences = [
     techs: [
       {
         id: 1,
-        url: '/images/techs/node.svg'
+        url: '/images/techs/node.svg',
       },
       {
         id: 2,
-        url: '/images/techs/prisma.svg'
+        url: '/images/techs/prisma.svg',
       },
-    ]
+    ],
   },
   {
     id: 4,
@@ -67,17 +67,17 @@ export const experiences = [
     techs: [
       {
         id: 1,
-        url: '/images/techs/github-actions.svg'
+        url: '/images/techs/github-actions.svg',
       },
       {
         id: 2,
-        url: '/images/techs/nginx.svg'
+        url: '/images/techs/nginx.svg',
       },
       {
         id: 3,
-        url: '/images/techs/docker.svg'
+        url: '/images/techs/docker.svg',
       },
-    ]
+    ],
   },
   {
     id: 5,
@@ -85,12 +85,12 @@ export const experiences = [
     techs: [
       {
         id: 1,
-        url: '/images/techs/js.svg'
+        url: '/images/techs/js.svg',
       },
       {
         id: 2,
-        url: '/images/techs/ts.svg'
+        url: '/images/techs/ts.svg',
       },
-    ]
-  }
-]
+    ],
+  },
+];

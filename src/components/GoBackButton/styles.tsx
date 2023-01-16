@@ -9,7 +9,7 @@ export const GoBackBtn = styled.button`
   margin: 4rem 0 0.4rem 0;
   transition: all 0.4s ease;
 
-  @media(max-width: 900px) {
+  @media (max-width: 900px) {
     margin: 6rem 0 0.4rem 0;
   }
 `;

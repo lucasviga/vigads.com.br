@@ -1,14 +1,18 @@
-import Link, {LinkProps} from "next/link";
-import { useRouter } from "next/router";
-import { ReactElement } from "react";
+import React from 'react';
+import Link, { LinkProps } from 'next/link';
+import { useRouter } from 'next/router';
 
 interface ActiveLinkProps extends LinkProps {
   children: React.ReactNode;
   activeClassName: string;
 }
 
-export default function ActiveLink({activeClassName, children, ...rest}: ActiveLinkProps) {
-  const {asPath} = useRouter();
+export default function ActiveLink({
+  activeClassName,
+  children,
+  ...rest
+}: ActiveLinkProps) {
+  const { asPath } = useRouter();
 
   const className = asPath === rest.href ? activeClassName : '';
 
@@ -16,5 +20,5 @@ export default function ActiveLink({activeClassName, children, ...rest}: ActiveL
     <Link {...rest} className={className}>
       {children}
     </Link>
-  )
+  );
 }

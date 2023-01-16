@@ -15,17 +15,17 @@ export const Wrapper = styled.div`
   flex-direction: column;
   justify-content: center;
 
-  @media(max-width: 900px) {
+  @media (max-width: 900px) {
     padding: 0 1.625rem;
   }
-  
+
   h1 {
     color: var(--white);
     padding-bottom: 3.75rem;
     font-size: 1.75rem;
     font-weight: 400;
   }
-  
+
   .download-resume {
     margin-bottom: 4rem;
     color: white;
@@ -33,7 +33,7 @@ export const Wrapper = styled.div`
     > a {
       text-decoration: underline;
       color: var(--green-500);
-      transition: all .4s ease;
+      transition: all 0.4s ease;
 
       &:hover {
         color: var(--purple-300);
@@ -43,37 +43,37 @@ export const Wrapper = styled.div`
 `;
 
 export const ListExperiences = styled.section`
-  margin: 0 0 4.75rem; 
+  margin: 0 0 4.75rem;
 
   .experience-item {
     display: flex;
     flex-direction: column;
 
     &:not(:last-child):after {
-      content: "";
+      content: '';
       height: 1px;
       width: 100%;
       background: var(--purple-300);
-      margin: 4.75rem 0;  
+      margin: 4.75rem 0;
     }
   }
-  
+
   .experience-content {
     display: flex;
     justify-content: flex-start;
-    gap: 8rem;        
+    gap: 8rem;
 
-    @media(max-width: 900px) {
+    @media (max-width: 900px) {
       display: flex;
       flex-direction: column;
-      gap: 4rem; 
+      gap: 4rem;
     }
   }
 
   .experience-details {
     width: 25%;
 
-    @media(max-width: 900px) {
+    @media (max-width: 900px) {
       width: 100%;
     }
 
@@ -87,19 +87,19 @@ export const ListExperiences = styled.section`
       color: var(--purple-300);
       font-size: 1rem;
       margin-bottom: 0.6rem;
-    }    
+    }
 
     time {
       color: var(--white);
       margin-top: 0.65rem;
-      display: flex;    
-      align-items: center;      
-      
+      display: flex;
+      align-items: center;
+
       > span:before {
         content: '';
         display: inline-block;
         width: 0.6rem;
-        height: 0.6rem;             
+        height: 0.6rem;
         border-radius: 50%;
         margin: 0 0.4rem;
         background-color: var(--green-500);

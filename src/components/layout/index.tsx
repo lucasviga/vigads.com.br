@@ -1,18 +1,19 @@
-import Footer from "./Footer";
-import Navbar from "./Navbar";
-import NavbarMobile from "./NavbarMobile";
+import React from 'react';
+import Footer from './Footer';
+import Navbar from './Navbar';
+import NavbarMobile from './NavbarMobile';
 
 interface LayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
-export default function Layout({ children }:LayoutProps) {
+export default function Layout({ children }: LayoutProps) {
   return (
     <>
-      <Navbar />      
+      <Navbar />
       <NavbarMobile />
       <main>{children}</main>
       <Footer />
     </>
-  )
+  );
 }

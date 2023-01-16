@@ -5,7 +5,7 @@ export const Header = styled.header`
   margin: 0 auto;
   padding: 1rem 0 0;
 
-  @media(max-width: 900px) {
+  @media (max-width: 900px) {
     display: none;
   }
 
@@ -17,7 +17,7 @@ export const Header = styled.header`
     color: var(--green-500);
 
     .nav-active {
-      color: var(--purple-300)
+      color: var(--purple-300);
     }
 
     > span {
@@ -27,14 +27,14 @@ export const Header = styled.header`
     ul {
       display: flex;
       gap: 3.75rem;
-      
+
       li a {
-        transition: all .5s ease;    
-      }      
+        transition: all 0.5s ease;
+      }
 
       a:hover {
-        color: var(--purple-300);        
+        color: var(--purple-300);
       }
-    }    
+    }
   }
 `;

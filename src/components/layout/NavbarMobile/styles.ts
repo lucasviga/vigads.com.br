@@ -3,20 +3,20 @@ import styled from 'styled-components';
 export const Nav = styled.nav`
   display: none;
 
-  @media(max-width: 900px) {
+  @media (max-width: 900px) {
     display: block;
     position: fixed;
     z-index: 12;
-    width: 100%;   
+    width: 100%;
     top: 0;
     left: 50%;
     transform: translate(-50%, 0);
-    background: var(--purple-900);        
+    background: var(--purple-900);
     border-bottom: 1px var(--purple-700) solid;
 
     .navbar-mobile-wrapper {
       height: 48px;
-      
+
       > div {
         display: flex;
         align-items: center;
@@ -39,17 +39,17 @@ export const Nav = styled.nav`
           }
         }
       }
-    }    
+    }
   }
 `;
 
 export const ListMenu = styled.ul`
   display: none;
 
-  @media(max-width: 900px) {
+  @media (max-width: 900px) {
     z-index: 10;
     position: fixed;
-    display: block;  
+    display: block;
     height: 100vh;
     width: 100%;
     background-color: var(--purple-900);

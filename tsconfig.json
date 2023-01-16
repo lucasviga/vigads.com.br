@@ -15,6 +15,13 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "jest.config.js", "src/components/layout/Navbar/ActiveLink.test.jsx", "src/@types/svg.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "jest.config.js",
+    "src/components/layout/Navbar/ActiveLink.test.jsx",
+    "src/@types/svg.ts"
+  ],
   "exclude": ["node_modules"]
 }
