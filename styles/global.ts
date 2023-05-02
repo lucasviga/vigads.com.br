@@ -1,7 +1,9 @@
-import { createGlobalStyle } from "styled-components"
+import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   :root {
+    --black-900: #0A080F;
+    
     --purple-900: #120F1A;
     --purple-800: #15121E;
     --purple-700: #211A32;
@@ -9,6 +11,24 @@ export const GlobalStyle = createGlobalStyle`
     --purple-300: #B292FF;
     --green-500: #5FB9B0;
     --white: #ffffff;
+
+    --purple-light-glow: conic-gradient(
+      from 180deg at 50% 50%,
+      #1E092E 0deg,
+      #1E092E 55deg,
+      #1E092E 120deg,
+      #1E092E 160deg,
+      transparent 360deg
+    );
+
+    --purple-dark-glow: conic-gradient(
+      from 180deg at 50% 50%,
+      #1A0338 0deg,
+      #1A0338 55deg,
+      #1A0338 120deg,
+      #1A0338 160deg,
+      transparent 360deg
+    );
   }
 
   * {
@@ -21,8 +41,8 @@ export const GlobalStyle = createGlobalStyle`
   body {    
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-    background: var(--purple-900);
-    height: 100%;
+    background: var(--black-900);
+    height: 100%;    
   }
 
   ul {
@@ -47,5 +67,3 @@ export const GlobalStyle = createGlobalStyle`
     cursor: pointer;
   }
 `
-
-
