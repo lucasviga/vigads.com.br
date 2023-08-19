@@ -1,29 +1,37 @@
 import styled from 'styled-components'
 
 export const Aboutme = styled.section`
-  display: grid;
-  max-width: 1120px;
-  margin: 4.875rem auto;
-
-  position: relative;
-  z-index: 1;
-
-  grid-template-areas:
-    '. avatar'
-    'aboutme avatar'
-    'bio avatar'
-    '. avatar';
-  justify-content: space-between;
-
   @media (max-width: 900px) {
-    grid-template-areas:
-      'avatar .'
-      'avatar aboutme'
-      'avatar .'
-      'bio bio';
+    height: 100vh;  
+    display: grid;
+    align-items: center;
+  }
 
-    margin: 4.875rem 1.625rem;
-    grid-template-columns: 1fr 1fr;
+  .about-me-content {
+    display: grid;
+    max-width: 1120px;
+    margin: 4.875rem auto;
+
+    position: relative;
+    z-index: 1;
+
+    grid-template-areas:
+      '. avatar'
+      'aboutme avatar'
+      'bio avatar'
+      '. avatar';
+    justify-content: space-between;
+
+    @media (max-width: 900px) {
+      grid-template-areas:      
+        'avatar .'
+        'avatar aboutme'
+        'avatar .'
+        'bio bio';
+
+      margin: 0 1.625rem;
+      grid-template-columns: 1fr 1fr;    
+    }
   }
 
   .about-me {
@@ -63,49 +71,27 @@ export const Aboutme = styled.section`
       }
 
       @media (max-width: 600px) {
-        line-height: 1.5rem;
+        line-height: 2rem;
       }
     }
   }
 
   .avatar {
     grid-area: avatar;
+    width: 400px;
+    height: 390px;
 
-    position: relative;
-    z-index: 1;
-    margin-right: 2rem;
-
-    @media (max-width: 900px) {
-      margin-right: 0;
+    img {
+      width: 100%;
+      height: 100%;
     }
 
     @media (max-width: 900px) {
-      img {
-        width: 7.438rem;
-        height: 10.5rem;
-      }
+      width: 160px;
+      height: 150px;
     }
   }
 
-  .avatar::after {
-    content: '';
-    width: 212px;
-    height: 298px;
-    background: linear-gradient(180deg, var(--purple-500) 0%, #120f1a 97.32%);
-
-    position: absolute;
-    top: 2rem;
-    left: 2rem;
-    z-index: -1;
-    border-radius: 0.375rem;
-
-    @media (max-width: 900px) {
-      width: 7.438rem;
-      height: 10.5rem;
-      top: 1rem;
-      left: 1rem;
-    }
-  }
 `
 
 export const Slogan = styled.section`
