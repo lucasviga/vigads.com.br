@@ -2,7 +2,6 @@ import styled from 'styled-components'
 
 export const Aboutme = styled.section`
   @media (max-width: 900px) {
-    height: 100vh;  
     display: grid;
     align-items: center;
   }
@@ -29,7 +28,7 @@ export const Aboutme = styled.section`
         'avatar .'
         'bio bio';
 
-      margin: 0 1.625rem;
+      margin: 8rem 1.625rem 0 1.625rem;
       grid-template-columns: 1fr 1fr;    
     }
   }
