@@ -159,3 +159,52 @@ export const Slogan = styled.section`
     }
   }
 `
+export const MyExperience = styled.section`
+  max-width: 1120px;
+  margin: 4.875rem auto;
+
+  @media (max-width: 900px) {
+    margin: 0 1.625rem;
+  }
+ 
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  header {    
+    display: flex;
+    align-items: center;
+    gap: 1rem;      
+    div {
+      width: 2.625rem;
+      height: 2.625rem;
+      border-radius: 100%;
+      background-color: var(--purple-700);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;    
+    }
+
+    span {
+      display: block;
+      color: var(--green-500);
+    }
+  }
+
+  p {
+    margin-top: 0.6rem;
+    color: var(--purple-300);
+  }
+
+  a {
+    color: var(--white);
+    transition: all 0.4s ease-in;
+
+    &:hover {
+      color: var(--purple-300);
+    }
+  }
+`;

@@ -1,7 +1,8 @@
 export const techs = [
+
   {
     id: 1,
-    role: 'Front-end Engineer Design',
+    role: 'Front-end Engineering Design',
     techs: [
       {
         id: 1,
@@ -42,38 +43,6 @@ export const techs = [
   },
   {
     id: 2,
-    role: 'Publications in both stores',
-    techs: [
-      {
-        id: 1,
-        url: '/images/techs/appstore.svg',
-        label: 'App Store',
-      },
-      {
-        id: 2,
-        url: '/images/techs/googleplay.svg',
-        label: 'Google Play Store',
-      },
-    ]
-  },
-  {
-    id: 3,
-    role: 'Back-end',
-    techs: [
-      {
-        id: 1,
-        url: '/images/techs/node.svg',
-        label: 'Node',
-      },
-      {
-        id: 2,
-        url: '/images/techs/prisma.svg',
-        label: 'Prisma',
-      },
-    ]
-  },
-  {
-    id: 4,
     role: 'Devops',
     techs: [
       {
@@ -90,6 +59,38 @@ export const techs = [
         id: 3,
         url: '/images/techs/docker.svg',
         label: 'Docker',
+      },
+    ]
+  },  
+  {
+    id: 3,
+    role: 'Publications in both stores',
+    techs: [
+      {
+        id: 1,
+        url: '/images/techs/appstore.svg',
+        label: 'App Store',
+      },
+      {
+        id: 2,
+        url: '/images/techs/googleplay.svg',
+        label: 'Google Play Store',
+      },
+    ]
+  },
+  {
+    id: 4,
+    role: 'Back-end',
+    techs: [
+      {
+        id: 1,
+        url: '/images/techs/node.svg',
+        label: 'Node',
+      },
+      {
+        id: 2,
+        url: '/images/techs/prisma.svg',
+        label: 'Prisma',
       },
     ]
   },

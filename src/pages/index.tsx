@@ -1,12 +1,18 @@
 import Image from 'next/image'
 
-import { Aboutme, Slogan } from '../../styles/pages/home'
+import { Aboutme, MyExperience, Slogan } from './styles'
 import { SkillsCarousel } from '../components/SkillsCarousel';
 
 import avatar from '../../public/images/me.png';
 import Link from 'next/link';
+import { GetServerSidePropsContext } from 'next';
+import { getUserAgentSSR } from '../utils/getUserAgent';
 
-export default function Home() {
+interface HomeProps {
+  isSsrMobile: boolean;
+}
+
+export default function Home({isSsrMobile}: HomeProps) {
 
   return (
     <>
@@ -45,15 +51,30 @@ export default function Home() {
         <h3>Coffee</h3>
       </Slogan>
 
-      {/* <MyExperience>
+      <MyExperience>
         <div>
-          Experience
-        </div>
+          <header>
+            <div>
+              <Image src="/images/techs/rn.svg" width={24} height={24} alt="React Icon" />
+            </div>
+            <span>Experience</span>
+          </header>
 
-        <Link href="/experience">see all experiences</Link>
-      </MyExperience> */}
+          <Link href="/experience">see all</Link>  
+        </div>        
 
-      <SkillsCarousel />
+        <p>What technologies have I been using?</p>
+      </MyExperience>
+
+      <SkillsCarousel isMobile={isSsrMobile} />
     </>
   )
+}
+
+export async function getServerSideProps(ctx: GetServerSidePropsContext) { 
+  return {
+    props: {
+      isSsrMobile: getUserAgentSSR(ctx)
+    }
+  };
 }

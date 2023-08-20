@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { Container } from './styles'
+import { Content } from './styles'
 
 interface ListItemSkillProps {
   tech: {
@@ -15,7 +15,7 @@ interface ListItemSkillProps {
 
 export function ListItemSkill({ tech }: ListItemSkillProps) {
   return (
-    <Container className="keen-slider__slide">
+    <Content className="keen-slider__slide">
       <h1>{tech.role}</h1>
       {tech.techs.map((item) => (
         <li key={item.id}>
@@ -26,6 +26,6 @@ export function ListItemSkill({ tech }: ListItemSkillProps) {
           {item.label}
         </li>        
       ))}
-    </Container>
+    </Content>
   )
 }

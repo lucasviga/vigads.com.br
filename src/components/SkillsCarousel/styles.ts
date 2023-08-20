@@ -1,10 +1,17 @@
 import styled from 'styled-components';
 
-export const Container = styled.ul`
+export const Container = styled.div`
+  margin-top: 4rem;
+`;
+
+export const Content = styled.ul`
   background: var(--purple-800, #15121E);
   border-radius: 0.75rem;
 
-  width: 20rem;
+  margin-bottom: 8rem;
+
+  width: 19.0625rem;
+  height: max-content;
   padding: 1.4rem 2rem;
   color: var(--white);
   font-weight: 400;
