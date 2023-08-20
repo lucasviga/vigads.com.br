@@ -1,4 +1,4 @@
-import { Container, ListEducations, Wrapper } from "./styles";
+import { Container, ListEducations, Wrapper } from "../../../styles/pages/Education";
 import GoBackToPreviousPage from "../../components/GoBackButton";
 import { educations } from "../../data/education";
 

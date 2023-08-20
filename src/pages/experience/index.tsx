@@ -1,5 +1,4 @@
-import Image from "next/image";
-import { Container, ListExperiences, Wrapper } from "./styles";
+import { Container, ListExperiences, Wrapper } from "../../../styles/pages/Experience";
 import GoBackToPreviousPage from "../../components/GoBackButton";
 
 export default function Experience() {

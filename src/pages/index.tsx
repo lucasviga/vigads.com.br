@@ -1,11 +1,11 @@
 import Image from 'next/image'
-
-import { Aboutme, MyExperience, Slogan } from './styles'
-import { SkillsCarousel } from '../components/SkillsCarousel';
-
-import avatar from '../../public/images/me.png';
 import Link from 'next/link';
 import { GetServerSidePropsContext } from 'next';
+
+import avatar from '../../public/images/me.png';
+import { Aboutme, MyExperience, Slogan } from '../../styles/pages/Home'
+import { SkillsCarousel } from '../components/SkillsCarousel';
+
 import { getUserAgentSSR } from '../utils/getUserAgent';
 
 interface HomeProps {
