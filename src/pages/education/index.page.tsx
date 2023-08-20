@@ -1,6 +1,6 @@
-import { Container, ListEducations, Wrapper } from "../../styles/pages/education";
-import GoBackToPreviousPage from "../components/GoBackButton";
-import { educations } from "../data/education";
+import { Container, ListEducations, Wrapper } from "./styles";
+import GoBackToPreviousPage from "../../components/GoBackButton";
+import { educations } from "../../data/education";
 
 export default function Education() {
   return (

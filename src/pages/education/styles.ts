@@ -9,6 +9,7 @@ export const Container = styled.section`
 `;
 
 export const Wrapper = styled.div`
+  z-index: 1;
   max-width: 1120px;
   width: 100%;
   display: flex;
