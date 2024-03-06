@@ -3,7 +3,7 @@ import { css } from "../../../styled-system/css";
 export const educations = css({
   padding: { xs: '0 2.125rem', xl: 'unset'},
   maxW: { xl: '1120px', '2xl': '1520px' },  
-  margin: { xl: '15.625rem auto 8.75rem auto' },
+  margin: { xs: '0 0 5rem 0', xl: '15.625rem auto 8.75rem auto' },
 
   '& li': {
     display: 'flex',

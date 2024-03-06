@@ -42,7 +42,7 @@ export const resumeDownload = css({
 export const experience = css({
   maxW: { xl: '1120px', '2xl': '1520px' },
   margin: { 
-    xs: '6.25rem 2.125rem 0 2.125rem',
+    xs: '6.25rem 2.125rem 5rem 2.125rem',
     xl: '6.25rem auto'
   },
 
