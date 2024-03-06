@@ -1,0 +1,16 @@
+@layer reset, base, tokens, recipes, utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: #0C0C0D;
+  }
+
+  ul, li {
+    list-style: none;
+  }
+}
