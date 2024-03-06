@@ -1,8 +1,10 @@
 import "./global.css";
 import 'keen-slider/keen-slider.min.css'
 
+import Script from "next/script";
 import type { Metadata } from "next";
 import { Raleway } from "next/font/google";
+
 import { MenuNav } from "./components/MenuNav";
 import { Footer } from "./components/Footer";
 
@@ -21,9 +23,9 @@ export default function RootLayout({
   return (
     <html lang="en">
 
-      <script strategy="beforeInteractive" async src="https://www.googletagmanager.com/gtag/js?id=G-0T9BHVMG9L" />
+      <Script strategy="beforeInteractive" async src="https://www.googletagmanager.com/gtag/js?id=G-0T9BHVMG9L" />
           
-      <script 
+      <Script 
         strategy="beforeInteractive"
         id="google-analytics"
         dangerouslySetInnerHTML={{
