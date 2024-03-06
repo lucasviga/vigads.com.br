@@ -33,7 +33,7 @@ export default function Experience() {
             <p>Main activities:</p>
             <p>• Led the development team Squad, and mentoring Front-End juniors developers. (JavaScript, React JS and React Native).</p>
             <p>• Designed interfaces for web and mobile apps using Figma.</p>
-            <p>• Published the first company's React Native app on Google Play and App Store.</p>
+            <p>• Published the first company&apos;s React Native app on Google Play and App Store.</p>
             <p>• Automatized deployments for frontend and backend projects using GitHub Actions.</p>  
           </div>      
         </li>
