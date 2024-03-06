@@ -109,6 +109,12 @@ export const introExperienceBox = css({
 export const experienceCarousel = css({
   w: { xl: '100%', },
   margin: { xs: '3.438rem 2.125rem', xl: 'unset' },
+  '& span': {
+    fontWeight: 'bold',
+    color: 'gray.800',
+    display: 'block',
+    marginTop: '0.8rem'
+  },
 })
 
 export const techCard = cva({
