@@ -5,7 +5,7 @@ export const intro = css({
   flexDir: 'column',
   alignItems: 'center',
   gap: '2.375rem',
-  marginTop: { xs: '12rem' },
+  marginTop: { xs: '8rem', xl: '12rem' },
 
   '& > p': {
     textAlign: 'center',
@@ -17,6 +17,7 @@ export const intro = css({
 
     '& strong': {
       fontWeight: 'bold',
+      color: 'white'
     },
 
     xl: {

@@ -14,7 +14,7 @@ export const me = css({
   alignItems: 'center',
   justifyContent: {xs: 'center', xl: 'space-between'},
   
-  marginTop: { xl: '10rem' },
+  marginTop: { xl: '6rem', '2xl': '10rem' },
   padding: { xl: '0 6.5rem', '2xl': '0 12.5rem'},
   
   '& > img': {

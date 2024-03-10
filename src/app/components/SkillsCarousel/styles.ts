@@ -6,7 +6,7 @@ export const skills = css({
     fontSize: {xs: '2rem', xl: '3.75rem' },
     color: 'gray.300',
     textAlign: { xs: 'center' },    
-    maxW: { xs: '320px', xl: '850px' },
+    maxW: { xs: '320px', xl: '650px' },
     margin: '0 auto',
   },
   '& > div': {

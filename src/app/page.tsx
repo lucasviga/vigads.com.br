@@ -46,7 +46,7 @@ export default function Home() {
         <div>
           <h1>Hi, I’m Lucas</h1>
           <p>
-            During these <span>4 years</span> as <span>Front-End Software Engineer</span>, My role has 
+            During my <span>4 years</span> as <span>Front-End Software Engineer</span>, My role has 
             extended beyond coding to effective communication with various 
             departments, to define new features and spearheading the development 
             of new apps.

@@ -29,7 +29,7 @@ export function SkillsCarousel() {
 
   return (
     <section className={skills}>
-      <h2>These are the technologies I’ve been using</h2>
+      <h2>The technologies I’ve been using...</h2>
         
       <div ref={ref} className="keen-slider">
         {techs.map((skill) => (
