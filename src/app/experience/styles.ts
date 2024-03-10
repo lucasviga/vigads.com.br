@@ -10,7 +10,7 @@ export const intro = css({
   '& > p': {
     textAlign: 'center',
     color: 'gray.300',
-    maxW: { xs: '278px', xl: '640px' },
+    maxW: { xs: '340px', xl: '640px' },
     margin: { xs: '0 auto' },
     lineHeight: { xs: '2rem', xl: '3rem' },
     fontWeight: 'light',
