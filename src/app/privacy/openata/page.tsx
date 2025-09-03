@@ -1,4 +1,4 @@
-import { experience, intro, resumeDownload } from "./styles";
+import { experience } from "./styles";
 
 export default function PrivacyOpenAta() {
   return (
