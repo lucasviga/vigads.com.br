@@ -1,4 +1,16 @@
-@layer reset, base, tokens, recipes, utilities;
+@import "tailwindcss";
+@import "./dashboard.css" layer(components);
+
+@theme {
+  --font-manrope: var(--font-manrope);
+  --color-hd-bg: oklch(0.12 0.01 270);
+  --color-hd-ink: oklch(0.97 0.005 270);
+  --color-hd-muted: oklch(0.68 0.015 270);
+  --color-hd-primary: oklch(0.78 0.08 250);
+  --color-hd-accent: oklch(0.72 0.1 265);
+  --radius-hd: 1.5rem;
+  --ease-hd: cubic-bezier(0.16, 1, 0.3, 1);
+}
 
 @layer base {
   html {
@@ -7,10 +19,17 @@
   }
 
   body {
-    background-color: #0C0C0D;
+    margin: 0;
+    background-color: #0c0c0d;
   }
 
-  ul, li {
+  body:has([data-home-shell]) {
+    background-color: var(--color-hd-bg);
+  }
+
+  ul,
+  li {
     list-style: none;
   }
 }
+

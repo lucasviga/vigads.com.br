@@ -1,71 +1,107 @@
-import { experience } from "./styles";
-
 export default function PrivacyOpenAta() {
   return (
-    <main>
-      <ul className={experience}>
-        <li>
-          <div className="experience-details">
-            <h2>Política de Privacidade do Open ATA</h2>
-          </div>
+    <main className="min-h-dvh bg-[oklch(0.12_0.01_270)] px-6 py-16 text-[oklch(0.97_0.005_270)] sm:px-10">
+      <article className="mx-auto max-w-3xl rounded-[2.5rem] bg-[oklch(0.18_0.015_270)] px-8 py-12 sm:px-12 sm:py-16">
+        <h1 className="text-2xl font-semibold sm:text-3xl">
+          Política de Privacidade do Open ATA
+        </h1>
 
-          <div className="experience-activity">
-            <h3>Bem-vindo ao Open ATA, Amigos do Tênis Amazonense</h3>            
-          
-            <p>
-                A sua privacidade é importante para
-                nós. Esta Política de Privacidade explica como coletamos, usamos, divulgamos e protegemos
-                suas informações quando você utiliza nosso aplicativo.</p>
+        <div className="mt-8 space-y-6 text-[oklch(0.68_0.015_270)]">
+          <section>
+            <h2 className="text-lg font-semibold text-[oklch(0.72_0.1_265)]">
+              Bem-vindo ao Open ATA, Amigos do Tênis Amazonense
+            </h2>
+            <p className="mt-4 leading-7">
+              A sua privacidade é importante para nós. Esta Política de
+              Privacidade explica como coletamos, usamos, divulgamos e
+              protegemos suas informações quando você utiliza nosso aplicativo.
+            </p>
+          </section>
 
-                <p>
-                1. Informações que Coletamos
-                Para oferecer uma experiência personalizada e relevante, coletamos as seguintes
-                informações:
-                • Informações Pessoais: Nome, e-mail, e outros dados de contato que você nos
-                fornece ao se registrar no aplicativo ou ao interagir com ele.
-                • Dados de Uso: Informações sobre como você usa o aplicativo, incluindo torneios e
-                partidas que você acompanha.
-                • Dados de Localização: Podemos coletar dados de localização para fornecer
-                informações relevantes sobre eventos de tênis em sua área.
-                </p>
+          <section>
+            <h2 className="text-lg font-semibold text-[oklch(0.72_0.1_265)]">
+              1. Informações que Coletamos
+            </h2>
+            <p className="mt-4 leading-7">
+              Para oferecer uma experiência personalizada e relevante,
+              coletamos as seguintes informações: Informações Pessoais (nome,
+              e-mail e outros dados de contato), Dados de Uso (torneios e
+              partidas que você acompanha) e Dados de Localização (eventos de
+              tênis em sua área).
+            </p>
+          </section>
 
-                <p>2. Como Usamos Suas Informações
-                Utilizamos suas informações para:
-                • Personalizar a Experiência: Oferecer conteúdo relevante e personalizado com base
-                em suas preferências e atividades no aplicativo.
-                • Fornecer e Melhorar o Serviço: Manter o funcionamento do aplicativo, incluindo
-                atualizações e melhorias contínuas.
-                • Comunicar-se com Você: Enviar notificações sobre novos torneios, partidas e outras
-                atualizações importantes relacionadas ao tênis amazonense.</p>
+          <section>
+            <h2 className="text-lg font-semibold text-[oklch(0.72_0.1_265)]">
+              2. Como Usamos Suas Informações
+            </h2>
+            <p className="mt-4 leading-7">
+              Utilizamos suas informações para personalizar a experiência,
+              fornecer e melhorar o serviço, e comunicar-se com você sobre
+              torneios, partidas e atualizações importantes.
+            </p>
+          </section>
 
-                <p>3. Compartilhamento de Informações
-                Não compartilhamos suas informações pessoais com terceiros, exceto nas seguintes
-                circunstâncias:
-                • Parceiros de Serviço: Podemos compartilhar informações com provedores de
-                serviços que auxiliam na operação e manutenção do aplicativo, desde que eles
-                concordem em manter a confidencialidade das suas informações.
-                • Obrigação Legal: Podemos divulgar suas informações se exigido por lei ou para
-                proteger nossos direitos, privacidade, segurança ou propriedade.
-                </p>
-                
-                <p>4. Segurança das Informações Empregamos medidas de segurança razoáveis para proteger suas informações contra acesso
-                não autorizado, alteração, divulgação ou destruição. No entanto, nenhuma transmissão de
-                dados pela Internet é completamente segura, e não podemos garantir a segurança absoluta.</p>
+          <section>
+            <h2 className="text-lg font-semibold text-[oklch(0.72_0.1_265)]">
+              3. Compartilhamento de Informações
+            </h2>
+            <p className="mt-4 leading-7">
+              Não compartilhamos suas informações pessoais com terceiros,
+              exceto com parceiros de serviço sob confidencialidade ou quando
+              exigido por lei.
+            </p>
+          </section>
 
-                <p>5. Seus Direitos Você tem o direito de acessar, corrigir ou excluir suas informações pessoais. Para fazer isso,
-                entre em contato conosco através dos canais fornecidos abaixo.</p>
-                <p>
-                  6. Alterações nesta Política Podemos atualizar esta Política de Privacidade periodicamente. Notificaremos você sobre
-                  quaisquer mudanças importantes por meio de notificações no aplicativo ou por e-mail.
-                </p>
-                <p>7. Contato
-                Se você tiver dúvidas ou preocupações sobre esta Política de Privacidade, entre em contato
-                conosco através de:
-                • E-mail: contact@vigads.com.br
-                </p>            
-          </div>      
-        </li>      
-      </ul>
+          <section>
+            <h2 className="text-lg font-semibold text-[oklch(0.72_0.1_265)]">
+              4. Segurança das Informações
+            </h2>
+            <p className="mt-4 leading-7">
+              Empregamos medidas de segurança razoáveis para proteger suas
+              informações contra acesso não autorizado, alteração, divulgação ou
+              destruição.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-semibold text-[oklch(0.72_0.1_265)]">
+              5. Seus Direitos
+            </h2>
+            <p className="mt-4 leading-7">
+              Você tem o direito de acessar, corrigir ou excluir suas
+              informações pessoais. Entre em contato conosco pelos canais
+              abaixo.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-semibold text-[oklch(0.72_0.1_265)]">
+              6. Alterações nesta Política
+            </h2>
+            <p className="mt-4 leading-7">
+              Podemos atualizar esta Política de Privacidade periodicamente.
+              Notificaremos você sobre mudanças importantes por meio do
+              aplicativo ou por e-mail.
+            </p>
+          </section>
+
+          <section>
+            <h2 className="text-lg font-semibold text-[oklch(0.72_0.1_265)]">
+              7. Contato
+            </h2>
+            <p className="mt-4 leading-7">
+              E-mail:{" "}
+              <a
+                href="mailto:contact@vigads.com.br"
+                className="font-semibold text-[oklch(0.78_0.08_250)] underline-offset-2 hover:underline"
+              >
+                contact@vigads.com.br
+              </a>
+            </p>
+          </section>
+        </div>
+      </article>
     </main>
-  )
+  );
 }
