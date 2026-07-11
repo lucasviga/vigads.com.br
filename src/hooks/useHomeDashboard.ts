@@ -2,33 +2,30 @@
 
 import { useCallback, useState } from "react";
 
-import { CHAT_STUB_REPLY } from "@/components/home-dashboard/chat/chat.constants";
 import type { CardId } from "@/components/home-dashboard/home-dashboard.types";
+import { useEscapeKey } from "@/hooks/useEscapeKey";
+import { usePortfolioChat } from "@/hooks/usePortfolioChat";
 
 export function useHomeDashboard() {
-  const [query, setQuery] = useState("");
-  const [reply, setReply] = useState<string | null>(null);
+  const chat = usePortfolioChat();
   const [openCard, setOpenCard] = useState<CardId | null>(null);
+  const closeCard = useCallback(() => setOpenCard(null), []);
 
-  const submitChat = useCallback(() => {
-    const trimmed = query.trim();
-    if (!trimmed) {
-      setReply("Type a question about my skills, experience, or education.");
-      return;
-    }
-    setReply(CHAT_STUB_REPLY);
-  }, [query]);
-
-  const closeCard = useCallback(() => {
-    setOpenCard(null);
-  }, []);
+  useEscapeKey(chat.isChatOpen && !openCard, chat.closeChat);
 
   return {
-    query,
-    reply,
+    query: chat.query,
+    messages: chat.messages,
+    heroHint: chat.heroHint,
+    isChatOpen: chat.isChatOpen,
+    isStreaming: chat.isStreaming,
+    loadingPhrase: chat.loadingPhrase,
     openCard,
-    setQuery,
-    submitChat,
+    setQuery: chat.setQuery,
+    submitChat: chat.submitChat,
+    openChat: chat.openChat,
+    closeChat: chat.closeChat,
+    toggleChat: chat.toggleChat,
     setOpenCard,
     closeCard,
   };

@@ -2,6 +2,8 @@
 
 import { useHomeDashboard } from "@/hooks/useHomeDashboard";
 import { BentoGrid } from "@/components/home-dashboard/bento/BentoGrid";
+import { ChatSidebar } from "@/components/home-dashboard/chat/ChatSidebar";
+import { ChatToggleButton } from "@/components/home-dashboard/chat/ChatToggleButton";
 import { HomeChat } from "@/components/home-dashboard/chat/HomeChat";
 import { CardModal } from "@/components/home-dashboard/modal/CardModal";
 
@@ -9,16 +11,36 @@ export function HomeDashboard() {
   const dashboard = useHomeDashboard();
 
   return (
-    <div className="shell" data-home-shell>
-      <div className="main">
-        <HomeChat
+    <div
+      className="shell"
+      data-home-shell
+      data-chat-open={dashboard.isChatOpen ? "true" : "false"}
+    >
+      <div className="shellLayout">
+        <div className="main">
+          <HomeChat
+            query={dashboard.query}
+            heroHint={dashboard.heroHint}
+            isDisabled={dashboard.isStreaming}
+            onQueryChange={dashboard.setQuery}
+            onSubmit={dashboard.submitChat}
+          />
+          <BentoGrid onOpenCard={dashboard.setOpenCard} />
+        </div>
+        <ChatSidebar
+          isOpen={dashboard.isChatOpen}
+          isStreaming={dashboard.isStreaming}
+          loadingPhrase={dashboard.loadingPhrase}
+          messages={dashboard.messages}
           query={dashboard.query}
-          reply={dashboard.reply}
           onQueryChange={dashboard.setQuery}
           onSubmit={dashboard.submitChat}
+          onClose={dashboard.closeChat}
         />
-        <BentoGrid onOpenCard={dashboard.setOpenCard} />
       </div>
+      {dashboard.isChatOpen ? null : (
+        <ChatToggleButton isOpen={false} onToggle={dashboard.openChat} />
+      )}
       <CardModal cardId={dashboard.openCard} onClose={dashboard.closeCard} />
     </div>
   );
