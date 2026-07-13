@@ -26,7 +26,7 @@ export async function streamChatResponse({
   signal,
   onEvent,
 }: StreamChatInput): Promise<void> {
-  const response = await fetch(`${CHAT_API_BASE_URL}/chat`, {
+  const response = await fetch(CHAT_API_BASE_URL, {
     method: "POST",
     headers: { "Content-Type": "application/json", Accept: "text/event-stream" },
     body: JSON.stringify({ question }),

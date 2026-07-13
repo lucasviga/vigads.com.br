@@ -38,4 +38,5 @@ export const CHAT_LOADING_PHRASES = [
 ] as const;
 
 export const CHAT_API_BASE_URL =
-  process.env.NEXT_PUBLIC_CHAT_API_URL ?? "http://localhost:3333";
+  process.env.NEXT_PUBLIC_CHAT_API_URL ??
+  "https://web-api.vigads.com.br/chat";
