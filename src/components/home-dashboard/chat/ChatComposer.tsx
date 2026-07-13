@@ -1,4 +1,8 @@
 import { ChatSendIcon } from "@/components/home-dashboard/chat/ChatIcons";
+import {
+  CHAT_INPUT_LABEL,
+  CHAT_SIDEBAR_PLACEHOLDER,
+} from "@/components/home-dashboard/chat/chat.constants";
 
 interface ChatComposerProps {
   query: string;
@@ -22,7 +26,7 @@ export function ChatComposer({
       }}
     >
       <label className="sr-only" htmlFor="sidebar-chat-input">
-        Ask about skills, experience, or education
+        {CHAT_INPUT_LABEL}
       </label>
       <textarea
         id="sidebar-chat-input"
@@ -34,7 +38,7 @@ export function ChatComposer({
           event.preventDefault();
           onSubmit();
         }}
-        placeholder="Ask a follow-up..."
+        placeholder={CHAT_SIDEBAR_PLACEHOLDER}
         rows={3}
         autoComplete="off"
         disabled={isDisabled}

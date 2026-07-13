@@ -28,7 +28,6 @@ export function handleStreamEvent({
   }
   if (event.type === "done") {
     if (!gate.revealed && gate.buffer) gate.flush();
-    setMessages((prev) => patchAssistantMessage(prev, assistantId, { status: "complete" }));
     return;
   }
   if (event.type !== "error") return;

@@ -1,5 +1,4 @@
-import { ExperienceTimelineHighlight } from "@/components/home-dashboard/experience/ExperienceTimelineHighlight";
-import { TimelineSection } from "@/components/home-dashboard/timeline/TimelineSection";
+import { ExperienceJobSections } from "@/components/home-dashboard/experience/ExperienceJobSections";
 import type { ExperienceJob } from "@/components/home-dashboard/experience/experience.types";
 
 interface ExperienceTimelineBodyProps {
@@ -8,6 +7,12 @@ interface ExperienceTimelineBodyProps {
 
 export function ExperienceTimelineBody({ job }: ExperienceTimelineBodyProps) {
   const location = `${job.location.city}, ${job.location.state}`;
+  const supportParts = [
+    job.company.name,
+    location,
+    job.employmentType,
+    job.workModel,
+  ].filter(Boolean);
 
   return (
     <>
@@ -15,47 +20,26 @@ export function ExperienceTimelineBody({ job }: ExperienceTimelineBodyProps) {
         <span className="timelinePeriod">{job.period.label}</span>
         <h3 className="timelineTitle">{job.role}</h3>
         <p className="timelineSupport">
-          <span className="timelineCompany">{job.company.name}</span>
-          <span className="timelineSupportSep" aria-hidden="true">
-            ·
-          </span>
-          <span className="timelinePlace">{location}</span>
-          <span className="timelineSupportSep" aria-hidden="true">
-            ·
-          </span>
-          <span className="timelineType">{job.employmentType}</span>
+          {supportParts.map((part, index) => (
+            <span key={`${part}-${index}`}>
+              {index > 0 ? (
+                <span className="timelineSupportSep" aria-hidden="true">
+                  ·
+                </span>
+              ) : null}
+              <span
+                className={
+                  index === 0 ? "timelineCompany" : "timelineSupportPart"
+                }
+              >
+                {part}
+              </span>
+            </span>
+          ))}
         </p>
       </div>
-      {job.responsibilities?.length ? (
-        <TimelineSection label="Responsibilities">
-          <ul className="timelineBody">
-            {job.responsibilities.map((item) => (
-              <li key={item}>{item}</li>
-            ))}
-          </ul>
-        </TimelineSection>
-      ) : null}
-      {job.highlights?.length ? (
-        <TimelineSection label="Highlights">
-          {job.highlights.map((highlight) => (
-            <ExperienceTimelineHighlight
-              key={highlight.title}
-              highlight={highlight}
-            />
-          ))}
-        </TimelineSection>
-      ) : null}
-      {job.skills?.length ? (
-        <TimelineSection label="Skills">
-          <ul className="timelineChipRow">
-            {job.skills.map((skill) => (
-              <li key={skill} className="timelineChip">
-                {skill}
-              </li>
-            ))}
-          </ul>
-        </TimelineSection>
-      ) : null}
+      {job.summary ? <p className="timelineSummary">{job.summary}</p> : null}
+      <ExperienceJobSections job={job} />
     </>
   );
 }

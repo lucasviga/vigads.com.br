@@ -1,141 +1,146 @@
 export const experience = [
-    {
-    "id": "grupo-clickip-frontend",
-    "role": "Front-end Software Engineer",
-    "employmentType": "Contract",
-    "period": {
-        "start": "2020-01",
-        "end": null,
-        "current": true,
-        "label": "Jan 2020 - Present"
+  {
+    id: "grupo-clickip-senior",
+    role: "Senior Software Engineer",
+    employmentType: "Contractor",
+    workModel: "Remote",
+    period: {
+      start: "2020-01",
+      end: null,
+      current: true,
+      label: "Jan 2020 – Present",
     },
-    "location": {
-        "city": "Manaus",
-        "state": "AM",
-        "country": "Brazil"
+    location: {
+      city: "Manaus",
+      state: "AM",
+      country: "Brazil",
     },
-    "company": {
-        "name": "Grupo Clickip Tecnologia",
-        "description": "Click IP is an Internet provider holding."
+    company: {
+      name: "Grupo Clickip Tecnologia",
+      description:
+        "Develops software solutions for Internet Service Providers (ISPs), telecommunications companies, and internal business operations.",
     },
-    "highlights": [
-        {
-        "title": "Support Portal",
-        "description": "Developed a React web application to reduce call center overload during Internet outages.",
-        "impact": "Reduced support tickets by approximately 35% during network incidents.",
-        "technologies": [
-            "React",
-            "Vite",
-            "Zustand",
-            "Chakra UI"
-        ]
-        },
-        {
-        "title": "Router Documentation Platform",
-        "description": "Developed a web application to centralize documentation for all router models used by the company.",
-        "impact": "Reduced spreadsheet dependency.",
-        "technologies": [
-            "Next.js",
-            "Zustand",
-            "Tailwind CSS"
-        ]
-        },
-        {
-        "title": "Customer Mobile App",
-        "description": "Built a React Native application allowing customers to access invoices, contracts, data usage, and payment confirmations.",
-        "technologies": [
-            "React Native CLI",
-            "Styled Components",
-            "Context API"
-        ]
-        },
-        {
-        "title": "Testing Culture",
-        "description": "Helped introduce unit testing practices across frontend projects.",
-        "technologies": [
-            "Jest",
-            "React Testing Library"
-        ]
-        }
+    summary:
+      "Works across the full product lifecycle — architecture, technical leadership, product discovery, and delivery — with Product, Design, Backend, and stakeholders.",
+    responsibilities: [
+      "Leading frontend technical decisions and establishing engineering standards",
+      "Working closely with Backend Engineers to design scalable system architectures",
+      "Mentoring developers through code reviews, technical discussions, and knowledge sharing",
+      "Building and maintaining production software for web and mobile platforms",
+      "Automating build, testing, and deployment pipelines using GitHub Actions",
     ],
-    "responsibilities": [
-        "Led the frontend squad and mentored junior Front-End developers.",
-        "Designed interfaces for web and mobile applications using Figma.",
-        "Published the company's first React Native application on Google Play and the App Store.",
-        "Automated frontend and backend deployments using GitHub Actions."
+    projects: [
+      {
+        name: "Interactive Notification System (INS)",
+        overview:
+          "Communication platform that automates customer notifications through the WhatsApp Business API and integrates with the company ERP.",
+        contributions: [
+          "Participated in product discovery, software architecture, and implementation",
+          "Designed scalable administrative interfaces",
+          "Introduced Cache-Aside caching with Redis",
+        ],
+      },
+      {
+        name: "Customer Portal (Web & Mobile)",
+        overview:
+          "Self-service platform for subscribers to manage internet services, invoices, payments, and support requests on web and mobile.",
+        contributions: [
+          "Developed the customer web portal",
+          "Built the company's first React Native application",
+          "Published Android and iOS applications",
+        ],
+      },
+      {
+        name: "Customer Support Chatbot",
+        overview:
+          "WhatsApp chatbot that automates support with self-service flows for invoices, account info, equipment restart, and requests.",
+        contributions: [
+          "Defined chatbot architecture and conversation flows",
+          "Designed integration strategies",
+          "Implemented chatbot workflows",
+        ],
+      },
+      {
+        name: "Event Monitor",
+        overview:
+          "Internal platform for operational teams to manage outages and planned maintenance while notifying affected customers.",
+        contributions: [
+          "Developed backend services",
+          "Implemented REST APIs",
+          "Built notification processing workflows",
+        ],
+      },
     ],
-    "skills": [
-        "JavaScript",
-        "TypeScript",
-        "React",
-        "React Native",
-        "Next.js",
-        "Figma",
-        "GitHub Actions",
-        "Jest",
-        "React Testing Library"
-    ]
-    },
-    {
-    "id": "grupo-clickip-support",
-    "role": "IT Support",
-    "employmentType": "Employee",
-    "period": {
-        "start": "2019-01",
-        "end": "2019-09",
-        "current": false,
-        "label": "Jan 2019 - Sep 2019"
-    },
-    "location": {
-        "city": "Manaus",
-        "state": "AM",
-        "country": "Brazil"
-    },
-    "company": {
-        "name": "Grupo Clickip Tecnologia",
-        "description": "Holding of Internet providers in Amazonas and Pará, including Intlink, Wire, Fiber Network, and Icom."
-    },
-    "responsibilities": [
-        "Provided technical support for residential and business customers.",
-        "Monitored network infrastructure using Grafana and Zabbix.",
-        "Maintained and updated company website information."
+    technologies: [
+      "React",
+      "Next.js",
+      "React Native",
+      "Node.js",
+      "PostgreSQL",
+      "Zustand",
+      "TypeScript",
     ],
-    "skills": [
-        "Customer Support",
-        "Technical Support",
-        "Grafana",
-        "Zabbix",
-        "Networking"
-    ]
+  },
+  {
+    id: "grupo-clickip-support",
+    role: "IT Support Technician",
+    employmentType: "Employee",
+    period: {
+      start: "2019-01",
+      end: "2019-09",
+      current: false,
+      label: "Jan 2019 – Sep 2019",
     },
-    {
-    "id": "trt11-intern",
-    "role": "IT Intern",
-    "employmentType": "Intern",
-    "period": {
-        "start": "2018-01",
-        "end": "2018-12",
-        "current": false,
-        "label": "Jan 2018 - Dec 2018"
+    location: {
+      city: "Manaus",
+      state: "AM",
+      country: "Brazil",
     },
-    "location": {
-        "city": "Manaus",
-        "state": "AM",
-        "country": "Brazil"
+    company: {
+      name: "Grupo Clickip Tecnologia",
+      description:
+        "Internet services company providing residential and business connectivity.",
     },
-    "company": {
-        "name": "Tribunal Regional do Trabalho da 11ª Região"
-    },
-    "responsibilities": [
-        "Participated in the migration of software for the payments department.",
-        "Updated information using Oracle SQL queries.",
-        "Reported and fixed software bugs."
+    summary:
+      "Provided technical support for residential and business internet customers while collaborating with network infrastructure teams.",
+    responsibilities: [
+      "Diagnose internet connectivity issues",
+      "Support residential and business customers",
+      "Monitor network infrastructure",
+      "Update website content",
+      "Escalate incidents to infrastructure teams",
     ],
-    "skills": [
-        "Oracle Database",
-        "SQL",
-        "Software Migration",
-        "Bug Fixing"
-    ]
-    }
-]
+    technologies: ["Grafana", "Zabbix", "Networking", "HTML", "CSS"],
+  },
+  {
+    id: "trt11-intern",
+    role: "IT Intern",
+    employmentType: "Internship",
+    period: {
+      start: "2018-01",
+      end: "2018-12",
+      current: false,
+      label: "Jan 2018 – Dec 2018",
+    },
+    location: {
+      city: "Manaus",
+      state: "AM",
+      country: "Brazil",
+    },
+    company: {
+      name: "Tribunal Regional do Trabalho da 11ª Região (TRT11)",
+      description:
+        "Regional Labor Court supporting internal systems for the payments department.",
+    },
+    summary:
+      "Supported enterprise systems used by the payments department while gaining experience with Oracle databases and software maintenance.",
+    responsibilities: [
+      "Support enterprise software migration",
+      "Write SQL queries for Oracle Database",
+      "Maintain production data",
+      "Fix software defects",
+      "Support internal users",
+    ],
+    technologies: ["Oracle Database", "SQL", "PL/SQL", "Git", "Windows"],
+  },
+];

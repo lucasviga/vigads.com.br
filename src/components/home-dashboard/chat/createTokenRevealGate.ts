@@ -1,6 +1,9 @@
 import type { Dispatch, SetStateAction } from "react";
-
-import { CHAT_MIN_LOADING_MS } from "@/components/home-dashboard/chat/chat.constants";
+import {
+  CHAT_MIN_LOADING_MS,
+  CHAT_REVEAL_CHARS,
+} from "@/components/home-dashboard/chat/chat.constants";
+import { createRevealPaceQueue } from "@/components/home-dashboard/chat/createRevealPaceQueue";
 import { patchAssistantMessage } from "@/components/home-dashboard/chat/chatMessages";
 import type { ChatMessage } from "@/components/home-dashboard/chat/chat.types";
 
@@ -15,38 +18,42 @@ export function createTokenRevealGate(input: TokenRevealGateInput) {
   const startedAt = Date.now();
   let buffer = "";
   let revealed = false;
-  let timer: ReturnType<typeof setTimeout> | null = null;
-
-  const clear = () => {
-    if (!timer) return;
-    clearTimeout(timer);
-    timer = null;
-  };
+  let delayTimer: ReturnType<typeof setTimeout> | null = null;
+  const pace = createRevealPaceQueue(input);
 
   const flush = () => {
     if (revealed || input.signal.aborted) return;
     revealed = true;
-    clear();
+    if (delayTimer) clearTimeout(delayTimer);
+    delayTimer = null;
     input.onFirstToken();
+    const firstChunk = buffer.slice(0, CHAT_REVEAL_CHARS);
+    const remaining = buffer.slice(CHAT_REVEAL_CHARS);
+    buffer = "";
     input.setMessages((prev) =>
-      patchAssistantMessage(prev, input.assistantId, { text: buffer, status: "streaming" }),
+      patchAssistantMessage(prev, input.assistantId, { text: firstChunk, status: "streaming" }),
     );
+    pace.enqueue(remaining);
   };
 
   const pushToken = (content: string) => {
-    buffer += content;
     if (revealed) {
-      input.setMessages((prev) =>
-        prev.map((m) =>
-          m.id === input.assistantId ? { ...m, text: `${m.text}${content}` } : m,
-        ),
-      );
+      if (pace.isBusy) pace.enqueue(content);
+      else pace.appendNow(content);
       return;
     }
-    const remaining = CHAT_MIN_LOADING_MS - (Date.now() - startedAt);
-    if (remaining <= 0) flush();
-    else if (!timer) timer = setTimeout(flush, remaining);
+    buffer += content;
+    const waitMs = CHAT_MIN_LOADING_MS - (Date.now() - startedAt);
+    if (waitMs <= 0) flush();
+    else if (!delayTimer) delayTimer = setTimeout(flush, waitMs);
   };
 
-  return { get revealed() { return revealed; }, get buffer() { return buffer; }, flush, clear, pushToken };
+  return {
+    get revealed() { return revealed; },
+    get buffer() { return buffer; },
+    flush,
+    clear() { if (delayTimer) clearTimeout(delayTimer); delayTimer = null; pace.clear(); },
+    pushToken,
+    waitUntilIdle: pace.waitUntilIdle,
+  };
 }

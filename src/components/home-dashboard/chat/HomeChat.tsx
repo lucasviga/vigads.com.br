@@ -1,6 +1,10 @@
 "use client";
 
 import { ChatSendIcon } from "@/components/home-dashboard/chat/ChatIcons";
+import {
+  CHAT_HERO_PLACEHOLDER,
+  CHAT_INPUT_LABEL,
+} from "@/components/home-dashboard/chat/chat.constants";
 
 interface HomeChatProps {
   query: string;
@@ -20,9 +24,9 @@ export function HomeChat({
   return (
     <section className="hero" aria-label="Ask about Lucas">
       <header className="heroIntro">
-        <h1 className="heroGreeting">Hey there, welcome!</h1>
+        <h1 className="heroGreeting">Welcome</h1>
         <p className="heroTagline">
-          {"< Explore my career, featured projects, and the technologies I use to create modern web experiences as a Front-End Software Engineer. />"}
+          {"< Get to know me better and explore my journey as Senior Software Engineer />"}
         </p>
       </header>
       <form
@@ -34,14 +38,14 @@ export function HomeChat({
       >
         <div className="chatBar">
           <label className="sr-only" htmlFor="home-chat-input">
-            Ask about skills, experience, or education
+            {CHAT_INPUT_LABEL}
           </label>
           <input
             id="home-chat-input"
             className="chatInput"
             value={query}
             onChange={(event) => onQueryChange(event.target.value)}
-            placeholder="Ask about my skills, experience, education..."
+            placeholder={CHAT_HERO_PLACEHOLDER}
             autoComplete="off"
             disabled={isDisabled}
           />

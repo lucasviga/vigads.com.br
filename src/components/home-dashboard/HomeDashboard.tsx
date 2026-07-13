@@ -6,6 +6,8 @@ import { ChatSidebar } from "@/components/home-dashboard/chat/ChatSidebar";
 import { ChatToggleButton } from "@/components/home-dashboard/chat/ChatToggleButton";
 import { HomeChat } from "@/components/home-dashboard/chat/HomeChat";
 import { CardModal } from "@/components/home-dashboard/modal/CardModal";
+import { EventsSection } from "@/components/home-dashboard/events/EventsSection";
+import { SideProjectsSection } from "@/components/home-dashboard/side-projects/SideProjectsSection";
 
 export function HomeDashboard() {
   const dashboard = useHomeDashboard();
@@ -26,6 +28,8 @@ export function HomeDashboard() {
             onSubmit={dashboard.submitChat}
           />
           <BentoGrid onOpenCard={dashboard.setOpenCard} />
+          <SideProjectsSection />
+          <EventsSection />
         </div>
         <ChatSidebar
           isOpen={dashboard.isChatOpen}

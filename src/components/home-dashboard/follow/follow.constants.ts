@@ -1,7 +1,7 @@
 export const FOLLOW_PROFILE = {
   name: "Lucas Viga",
   role: "Software Engineer",
-  location: "Manaus, AM",
+  location: "Manaus, Brazil",
   avatarSrc: "/images/lucas-viga-avatar.jpg",
   ctaHref: "https://www.linkedin.com/in/lucasviga/",
   ctaLabel: "Follow",

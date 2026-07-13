@@ -27,3 +27,15 @@ export function patchAssistantMessage(
     };
   });
 }
+
+export function appendAssistantChunk(
+  messages: ChatMessage[],
+  assistantId: string,
+  chunk: string,
+): ChatMessage[] {
+  return messages.map((message) =>
+    message.id === assistantId
+      ? { ...message, text: `${message.text}${chunk}`, status: "streaming" as const }
+      : message,
+  );
+}

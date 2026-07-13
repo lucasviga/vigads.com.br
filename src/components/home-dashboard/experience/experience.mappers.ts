@@ -1,8 +1,9 @@
 import { experience } from "@/data/experience";
 
 import type { HighlightSlide } from "@/components/home-dashboard/home-dashboard.types";
+import type { ExperienceJob } from "@/components/home-dashboard/experience/experience.types";
 
-const CARD_DETAIL_LIMIT = 110;
+const CARD_DETAIL_LIMIT = 140;
 
 function truncateText(text: string, limit = CARD_DETAIL_LIMIT): string {
   if (text.length <= limit) return text;
@@ -31,16 +32,29 @@ export function formatTenure(start: string): string {
   return `${years} ${yearLabel} ${months} ${monthLabel}`;
 }
 
+function buildSlideMeta(job: ExperienceJob): string | undefined {
+  if (job.workModel && job.employmentType) {
+    return `${job.workModel} · ${job.employmentType}`;
+  }
+  return job.employmentType;
+}
+
+function buildSlideDetail(job: ExperienceJob): string {
+  if (job.summary) return job.summary;
+  return job.responsibilities?.join(" ") ?? "";
+}
+
 export function mapExperienceSlides(): HighlightSlide[] {
   return experience.map((job) => {
-    const responsibilities = job.responsibilities?.join(" ") ?? "";
+    const detail = buildSlideDetail(job);
 
     return {
       title: job.role,
       company: job.company.name,
       period: job.period.label,
-      detail: truncateText(responsibilities),
-      fullDetail: responsibilities,
+      meta: buildSlideMeta(job),
+      detail: truncateText(detail),
+      fullDetail: detail,
     };
   });
 }

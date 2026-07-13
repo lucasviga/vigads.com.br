@@ -1,4 +1,5 @@
 import { ChatMessageBody } from "@/components/home-dashboard/chat/ChatMessageBody";
+import { CHAT_SIDEBAR_EMPTY } from "@/components/home-dashboard/chat/chat.constants";
 import type { ChatMessage } from "@/components/home-dashboard/chat/chat.types";
 
 interface ChatMessageItemProps {
@@ -20,7 +21,9 @@ function ChatMessageItem({ message, loadingPhrase }: ChatMessageItemProps) {
           : "chatMessage chatMessageAssistant"
       }
     >
-      <span className="chatMessageRole">{message.role === "user" ? "You" : "Lucas"}</span>
+      <span className="chatMessageRole">
+        {message.role === "user" ? "You" : "Lucas"}
+      </span>
       <ChatMessageBody
         text={displayText}
         isLoadingPhrase={isLoadingPhrase}
@@ -37,11 +40,7 @@ interface ChatMessageListProps {
 
 export function ChatMessageList({ messages, loadingPhrase }: ChatMessageListProps) {
   if (messages.length === 0) {
-    return (
-      <p className="chatSidebarEmpty">
-        Ask about skills, experience, education, or anything else about Lucas.
-      </p>
-    );
+    return <p className="chatSidebarEmpty">{CHAT_SIDEBAR_EMPTY}</p>;
   }
 
   return (

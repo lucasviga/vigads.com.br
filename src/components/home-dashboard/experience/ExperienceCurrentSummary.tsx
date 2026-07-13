@@ -18,7 +18,7 @@ export function ExperienceCurrentSummary({
         {job.period.current ? (
           <span className="experienceLiveBadge">
             <span className="experienceLiveDot" aria-hidden="true" />
-            In contract
+            {job.workModel ?? "Current"}
           </span>
         ) : null}
       </div>
@@ -34,6 +34,10 @@ export function ExperienceCurrentSummary({
         <div className="experienceSummaryRow">
           <dt>Tenure</dt>
           <dd>{tenure}</dd>
+        </div>
+        <div className="experienceSummaryRow">
+          <dt>Type</dt>
+          <dd>{job.employmentType}</dd>
         </div>
         <div className="experienceSummaryRow">
           <dt>Location</dt>

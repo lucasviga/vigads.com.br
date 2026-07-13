@@ -36,6 +36,8 @@ export async function runChatStream({
     });
     if (signal.aborted) return;
     if (!gate.revealed && gate.buffer) gate.flush();
+    await gate.waitUntilIdle();
+    if (signal.aborted) return;
     finalizeAssistant(setMessages, assistantId);
   } finally {
     signal.removeEventListener("abort", onAbort);

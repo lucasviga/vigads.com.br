@@ -26,6 +26,7 @@ export function InsightSlide({ slide }: InsightSlideProps) {
           </span>
         ) : null}
       </div>
+      {slide.meta ? <span className="insightBadge">{slide.meta}</span> : null}
       {slide.detail ? (
         <p className="insightDetail">{slide.detail}</p>
       ) : null}
