@@ -1,0 +1,32 @@
+/* Raw modal glass — keep outside Tailwind layers so backdrop-filter is preserved */
+
+.modal::backdrop {
+  background: oklch(0.04 0.01 270 / 0);
+  transition: background 420ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.modal[open]::backdrop {
+  background: oklch(0.04 0.01 270 / 0.4);
+}
+
+@starting-style {
+  .modal[open]::backdrop {
+    background: oklch(0.04 0.01 270 / 0);
+  }
+}
+
+.modal {
+  -webkit-backdrop-filter: blur(48px) saturate(1.4) !important;
+  backdrop-filter: blur(48px) saturate(1.4) !important;
+}
+
+.modalExperience {
+  -webkit-backdrop-filter: blur(48px) saturate(1.4) !important;
+  backdrop-filter: blur(48px) saturate(1.4) !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal::backdrop {
+    transition: none;
+  }
+}
