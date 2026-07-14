@@ -2,6 +2,7 @@ import "./global.css";
 import "./modal-glass.css";
 
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/next"
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Manrope, Raleway } from "next/font/google";
@@ -44,6 +45,7 @@ export default function RootLayout({
           }}
         />
         {children}
+        <Analytics />
       </body>
     </html>
   );
