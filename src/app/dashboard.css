@@ -2321,20 +2321,31 @@
 .modal {
   position: fixed;
   z-index: var(--z-modal);
-  inset: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  /* inset + margin auto centers without transform — Safari breaks
+     ::backdrop / backdrop-filter when <dialog> is transformed. */
+  inset: 0;
   width: min(52rem, calc(100% - 2rem));
+  height: fit-content;
   max-height: min(88dvh, 52rem);
+  overflow: visible;
+  margin: auto;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: var(--hd-ink);
+  box-shadow: none;
+}
+
+.modalPanel {
   overflow: auto;
-  margin: 0;
+  max-height: min(88dvh, 52rem);
   padding: 1.5rem 1.35rem 1.65rem 1.6rem;
-  border: 1px solid oklch(1 0 0 / 0.12);
+  border: 1px solid oklch(1 0 0 / 0.14);
   border-radius: 1.5rem;
-  background: oklch(0.16 0.012 270 / 0.55);
+  /* Dark tint under the blurred ::before glass layer (modal-glass.css). */
+  background: oklch(0.1 0.012 270 / 0.72);
   box-shadow:
-    0 40px 100px oklch(0.02 0.01 270 / 0.55),
+    0 40px 100px oklch(0.02 0.01 270 / 0.6),
     0 0 0 1px oklch(1 0 0 / 0.04),
     inset 0 1px 0 oklch(1 0 0 / 0.14);
   color: var(--hd-ink);
@@ -2343,15 +2354,25 @@
 
 .modalExperience {
   width: min(72rem, calc(100% - 2rem));
+  /* Explicit height: Safari collapses flex children when only max-height is set on <dialog>. */
+  height: min(88dvh, 52rem);
   max-height: min(88dvh, 52rem);
   overflow: hidden;
+  background: transparent;
+}
+
+.modalExperience .modalPanel {
   display: flex;
   flex-direction: column;
-  background: oklch(0.14 0.012 270 / 0.58);
+  height: 100%;
+  max-height: none;
+  min-height: 0;
+  overflow: hidden;
+  background: oklch(0.1 0.012 270 / 0.76);
 }
 
 .modalExperience .modalContent {
-  flex: 1;
+  flex: 1 1 0%;
   min-height: 0;
   overflow: hidden;
   gap: 0;
@@ -2363,7 +2384,6 @@
   gap: 0 1.75rem;
   min-height: 0;
   height: 100%;
-  max-height: calc(min(88dvh, 52rem) - 5.5rem);
 }
 
 .experienceModalMain {
@@ -2864,7 +2884,14 @@
 
 @media (max-width: 720px) {
   .modalExperience {
+    height: min(88dvh, 52rem);
+    max-height: min(88dvh, 52rem);
     overflow: hidden;
+  }
+
+  .modalExperience .modalPanel {
+    height: 100%;
+    min-height: 0;
   }
 
   .modalExperience .modalContent {
@@ -2879,7 +2906,7 @@
     display: flex;
     flex-direction: column;
     height: auto;
-    max-height: none;
+    min-height: min-content;
     gap: 1.25rem;
   }
 

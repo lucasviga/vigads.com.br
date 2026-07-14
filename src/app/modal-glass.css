@@ -2,31 +2,66 @@
 
 .modal::backdrop {
   background: oklch(0.04 0.01 270 / 0);
-  transition: background 420ms cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    background 420ms cubic-bezier(0.16, 1, 0.3, 1),
+    -webkit-backdrop-filter 420ms cubic-bezier(0.16, 1, 0.3, 1),
+    backdrop-filter 420ms cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .modal[open]::backdrop {
-  background: oklch(0.04 0.01 270 / 0.4);
+  background: oklch(0.04 0.01 270 / 0.62);
+  -webkit-backdrop-filter: blur(28px) saturate(1.25);
+  backdrop-filter: blur(28px) saturate(1.25);
 }
 
 @starting-style {
   .modal[open]::backdrop {
     background: oklch(0.04 0.01 270 / 0);
+    -webkit-backdrop-filter: blur(0) saturate(1);
+    backdrop-filter: blur(0) saturate(1);
   }
 }
 
-.modal {
-  -webkit-backdrop-filter: blur(48px) saturate(1.4) !important;
-  backdrop-filter: blur(48px) saturate(1.4) !important;
+/*
+  Glass on a ::before layer inside .modalPanel — not on <dialog> and not on
+  the content box. Avoids WebKit painting page cards through modal text.
+*/
+.modalPanel {
+  position: relative;
+  isolation: isolate;
 }
 
+.modalPanel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  background: oklch(0.14 0.012 270 / 0.4);
+  -webkit-backdrop-filter: blur(56px) saturate(1.4);
+  backdrop-filter: blur(56px) saturate(1.4);
+}
+
+.modalPanel > * {
+  position: relative;
+  z-index: 1;
+}
+
+.modal,
 .modalExperience {
-  -webkit-backdrop-filter: blur(48px) saturate(1.4) !important;
-  backdrop-filter: blur(48px) saturate(1.4) !important;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
   .modal::backdrop {
     transition: none;
+  }
+
+  .modalPanel::before {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: oklch(0.12 0.012 270 / 0.92);
   }
 }

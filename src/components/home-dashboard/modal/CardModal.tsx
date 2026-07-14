@@ -46,12 +46,12 @@ export function CardModal({ cardId, onClose }: CardModalProps) {
       aria-labelledby="home-card-modal-title"
     >
       {cardId ? (
-        <>
+        <div className="modalPanel">
           <ModalHeader title={TITLES[cardId]} onClose={onClose} />
           <div className="modalContent">
             <ModalBody cardId={cardId} />
           </div>
-        </>
+        </div>
       ) : null}
     </dialog>
   );
